@@ -1,0 +1,9 @@
+.ct_body_app {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.ct_table_details {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    grid-gap: 30px;
+}

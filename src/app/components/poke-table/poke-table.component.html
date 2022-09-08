@@ -1,0 +1,13 @@
+<div class="ct_table_pok">
+  <div>
+    <div
+      *ngFor="let pokemon of pokemons; let i = index"
+      [ngClass]="{'active': selectedItem === i}"
+      (click)='selectedItem = i;'
+      (click)="selectPokemon(pokemon)"
+      class="ct_pokemon"
+    >
+      <img [src]="pokemon.sprites.other.home.front_default" />
+    </div>
+  </div>
+</div>

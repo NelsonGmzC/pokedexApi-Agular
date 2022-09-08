@@ -1,0 +1,86 @@
+.ct_pokemon_details {
+    padding: 10px;
+}
+.ct_pokemon_details h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+.ct_pokemon_details h2 span {
+    font-size: 1.2rem;
+    font-weight: 200;
+    float: right;
+}
+
+
+.ct_types {
+    margin-top: 10px;
+}
+.ct_types span {
+    padding: 9px 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+
+.ct_Img {
+    position: relative;
+    z-index: 1;
+}
+.ct_Img img {
+    max-width: 300px;
+    width: 100%;
+    display: none;
+    margin: 0 auto;
+}
+.ct_Img img.act {
+    display: block;
+}
+
+
+.ct_inf {
+    position: relative;
+    background: #ffffff;
+    margin-top: -40px;
+    padding-top: 50px;
+    border-radius: 10px;
+    z-index: 0;
+}
+.ct_btn_img {
+    text-align: center;
+}
+.ct_btn_img button {
+    border: none;
+    padding: 7px 15px;
+    font-size: 1.1rem;
+    background: rgb(238 223 255);
+    color: #875ebc;
+    box-shadow: rgb(111 65 245 / 10%) 0px 7px 29px 0px;
+}
+.ct_btn_img button:hover {
+    cursor: pointer;
+    filter: grayscale(50%);
+    transform: scale(1.02);
+    transition: .5s;
+}
+.ct_btn_img button.act {
+    background: rgb(136 96 183);
+    color: #fff;
+    box-shadow: rgb(111 65 245 / 33%) 0px 7px 29px 0px;
+}
+.ct_btn_img button:nth-child(1) {
+    border-radius: 20px 0 0 20px;
+}
+.ct_btn_img button:nth-child(2) {
+    border-radius: 0 20px 20px 0;
+}
+
+.pieCanvas {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+

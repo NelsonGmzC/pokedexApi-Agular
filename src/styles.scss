@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: rgb(202,183,249);
+    background: linear-gradient(0deg, rgba(202,183,249,1) 0%, rgba(232,207,248,1) 100%);
+}
+
+/* width */
+::-webkit-scrollbar {
+width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: #DED0EE;
+border-radius: 20px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #8860B7;
+border-radius: 20px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    fill: grayscale(70%);
+}
