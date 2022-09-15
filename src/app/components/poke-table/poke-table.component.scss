@@ -1,3 +1,5 @@
+//style table
+//-------->
 .ct_table_pok {
     position: relative;
     width: calc(100% - 30px);
@@ -7,7 +9,7 @@
     padding: 15px;
 }
 .ct_table_pok > div {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 185px);
     overflow: auto;
 }
 .ct_pokemon {
@@ -49,8 +51,8 @@
     }
 }
 
-
-
+//style img pokemon
+//-------->
 .ct_pokemon img {
     width: 100%;
     background: rgb(202,183,249);
@@ -58,4 +60,45 @@
 }
 .ct_pokemon.active img {
     background: radial-gradient(circle, rgba(202,183,249,1) 0%, rgba(255,255,255,0) 65%);
+}
+
+//style list search pk
+//-------->
+.listSearchPk {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    max-width: 230px;
+    list-style: none;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px; 
+    max-height: 60vh;
+    overflow: auto;
+}
+.listSearchPk li p {
+    position: relative;
+    margin: 0;
+    //background: #8860b7;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+.listSearchPk li p:hover {
+    cursor: pointer;
+    background: #8860b7;
+    transition: .2s;
+    color: #fff;
+}
+.listSearchPk li p img {
+    position: absolute;
+    top: -3px;
+    right: 5%;
+    max-width: 44px;
+}
+
+//style input search
+.searchPokemon {
+    margin-top: 10px;
+    margin-bottom: -10px;
 }

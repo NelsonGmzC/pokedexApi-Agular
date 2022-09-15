@@ -8,7 +8,7 @@ import { Component, OnInit, Output } from '@angular/core';
 export class AppComponent implements OnInit {
 
   pokemonSelectTable: any;
-  selectPokemonGen: number = 1;
+  pokemonSelectGen: number = 1;
 
   ngOnInit(): void {
   }

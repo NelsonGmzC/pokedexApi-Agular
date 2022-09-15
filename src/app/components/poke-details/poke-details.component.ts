@@ -9,6 +9,7 @@ import { Chart, registerables } from 'chart.js';
 export class PokeDetailsComponent implements OnChanges {
   
   @Input() pokemonSelectDetails: any;
+  @Input() pokemonSelectGen: number | undefined;
   @ViewChild('front_default') front_default!: ElementRef;
   @ViewChild('front_shiny') front_shiny!: ElementRef;
   btnImgDefault:boolean = true;
@@ -28,8 +29,10 @@ export class PokeDetailsComponent implements OnChanges {
         }, 100);
       //}
     }
+    if (changes['pokemonSelectGen']) {
+      this.pokemonSelectDetails = undefined;
+    }
   }
-
 
   // Grafica 
   canvas: any;
@@ -45,7 +48,7 @@ export class PokeDetailsComponent implements OnChanges {
   }
 
   pieChartBrowser(): void {
-    this.canvas = this.pieCanvas.nativeElement;
+    this.canvas = <HTMLInputElement>this.pieCanvas.nativeElement;
     this.ctx = this.canvas.getContext('2d');
     this.pieChart = new Chart(this.ctx, {
       type: 'radar',

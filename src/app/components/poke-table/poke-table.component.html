@@ -1,3 +1,23 @@
+<mat-form-field appearance="fill" class="searchPokemon">
+  <mat-label>Search pokemon</mat-label>
+  <input
+    (ngModelChange)="searchPokemon($event)"
+    [(ngModel)]="searchPk"
+    matInput>
+</mat-form-field>
+<div>
+  <ul class="listSearchPk">
+    <li *ngFor="let item of dataSearchPk">
+      <p
+        (click)='selectedItem = item.id;'
+        (click)="selectPokemon(item)"
+        (click)="selectSearchPk(item.name)">
+        {{item.name}}
+        <img [src]="item.sprites.front_default" />
+      </p>
+    </li>
+  </ul>
+</div>
 <div class="ct_table_pok">
   <div>
     <div
@@ -5,8 +25,7 @@
       [ngClass]="{'active': selectedItem === i}"
       (click)='selectedItem = i;'
       (click)="selectPokemon(pokemon)"
-      class="ct_pokemon"
-    >
+      class="ct_pokemon">
       <img [src]="pokemon.sprites.other.home.front_default" />
     </div>
   </div>

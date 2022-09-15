@@ -5,18 +5,19 @@ import { Component, EventEmitter, OnChanges, OnInit, Output, SimpleChanges } fro
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnChanges {
-
-  selectPokemonGen = 1;
+export class HeaderComponent implements OnInit {
 
   @Output() pokemonSelectGen = new EventEmitter<number>();
+  selectedGen: number = 1;
 
   constructor() { }
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(this.selectPokemonGen);
-  }
 
   ngOnInit(): void {
+  }
+
+  selectPokemonGen(value: number) {
+    this.selectedGen = value;
+    this.pokemonSelectGen.emit(value);
   }
 
 }

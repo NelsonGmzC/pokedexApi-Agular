@@ -1,27 +1,26 @@
 <div
   class="ct_pokemon_details"
-  *ngIf="pokemonSelectDetails !== undefined"
-  >
-  <h2>
-    {{pokemonSelectDetails.name}}
-    <span>No {{pokemonSelectDetails.id}}</span>
-  </h2>
-  <div class="ct_types">
-    <span *ngFor="let type of pokemonSelectDetails.types">
-      {{type.type.name}}
-    </span>
+  *ngIf="pokemonSelectDetails !== undefined">
+  <div class="ct_title_inf">
+    <h2>
+      {{pokemonSelectDetails.name}}
+      <span>No {{pokemonSelectDetails.id}}</span>
+    </h2>
+    <div class="ct_types">
+      <span *ngFor="let type of pokemonSelectDetails.types">
+        {{type.type.name}}
+      </span>
+    </div>
   </div>
   <div class="ct_Img">
     <img
       #front_default
       [ngClass]="btnImgDefault ? 'act' : ''"
-      [src]="pokemonSelectDetails.sprites.other.home.front_default"
-    />
+      [src]="pokemonSelectDetails.sprites.other.home.front_default" />
     <img
       #front_shiny
       [ngClass]="btnImgShiny ? 'act' : ''"
-      [src]="pokemonSelectDetails.sprites.other.home.front_shiny"
-    />
+      [src]="pokemonSelectDetails.sprites.other.home.front_shiny" />
   </div>
   <div class="ct_inf">
     <div class="ct_btn_img">

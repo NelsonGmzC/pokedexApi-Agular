@@ -1,8 +1,14 @@
 <div class="ct_body_app">
-  <app-header></app-header>
+  <app-header (pokemonSelectGen)="pokemonSelectGen = $event"></app-header>
   <div class="ct_table_details">
-    <app-poke-table (pokemonSelect)="pokemonSelectTable = $event"></app-poke-table>
-    <app-poke-details [pokemonSelectDetails]="pokemonSelectTable"></app-poke-details>
+    <app-poke-table
+      (pokemonSelect)="pokemonSelectTable = $event"
+      [pokemonSelectGen]="pokemonSelectGen"
+    ></app-poke-table>
+    <app-poke-details
+      [pokemonSelectDetails]="pokemonSelectTable"
+      [pokemonSelectGen]="pokemonSelectGen"
+    ></app-poke-details>
   </div>
   <app-footer></app-footer>
 </div>

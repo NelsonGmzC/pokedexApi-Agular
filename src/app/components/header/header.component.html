@@ -1,10 +1,13 @@
-<div>
-    <ul>
-        <li (click)="selectPokemonGen == 1">
-            <p>generation I</p>
-        </li>
-        <li (click)="selectPokemonGen == 2">
-            <p>generation II</p>
-        </li>
-    </ul>
-</div>
+
+<ul class="MenuHead">
+  <li
+    (click)="selectPokemonGen(1)"
+    [ngClass]="{'active': selectedGen === 1}">
+    <p>generation I</p>
+  </li>
+  <li
+    (click)="selectPokemonGen(2)"
+    [ngClass]="{'active': selectedGen === 2}">
+    <p>generation II</p>
+  </li>
+</ul>

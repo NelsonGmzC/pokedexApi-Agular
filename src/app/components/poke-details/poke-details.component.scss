@@ -1,5 +1,8 @@
 .ct_pokemon_details {
-    padding: 10px;
+    background: rgba(255, 255, 255, 0.2509803922);
+    margin-top: 10px;
+    padding: 0;
+    border-radius: 10px;
 }
 .ct_pokemon_details h2 {
     font-size: 2rem;
@@ -10,6 +13,10 @@
     font-size: 1.2rem;
     font-weight: 200;
     float: right;
+}
+
+.ct_title_inf {
+    padding: 25px 25px 0 25px;
 }
 
 
@@ -30,6 +37,7 @@
     z-index: 1;
 }
 .ct_Img img {
+    margin-top: -18px;
     max-width: 300px;
     width: 100%;
     display: none;
@@ -43,7 +51,7 @@
 .ct_inf {
     position: relative;
     background: #ffffff;
-    margin-top: -40px;
+    margin-top: -45px;
     padding-top: 50px;
     border-radius: 10px;
     z-index: 0;
